@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(120deg, #ee94aa, #a465ec);
+  color: white;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+header,
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 20vh;
+}
+form input,
+form button {
+  font-size: 2rem;
+  border: none;
+  padding: 0.3rem;
+  background: white;
+}
+form button {
+  color: #ee94aa;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+form button:hover {
+  background-color: #ee94aa;
+  color: white;
+}
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-list {
+  min-width: 30%;
+  list-style-type: none;
+}
+.todo {
+  color: black;
+  background: white;
+  margin: 0.5rem;
+  font-size: 1.5rem;
+  text-shadow: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 1s ease-in-out;
+}
+.todoItem {
+  flex: 1;
+  padding: 0.3rem;
+}
+.complete-btn,
+.trash-btn {
+  background-color: #2caa20;
+  color: white;
+  cursor: pointer;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+}
+.trash-btn {
+  background-color: #f06424;
+  color: white;
+}
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+.complete {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+  color: #a465ec;
+  font-size: 1rem;
+  width: 10rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  text-shadow: none;
+  top: 0;
+  right: 0;
+  background: #f887a3;
+  padding: 0.3rem;
+  pointer-events: none;
+  transition: all 0.6s ease-in-out;
+}
+.select:hover::after {
+  color: #f887a3;
+  background: white;
+}
